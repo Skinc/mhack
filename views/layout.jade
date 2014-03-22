@@ -2,22 +2,30 @@
 !!! 5
 html(lang='en')
 head
+
+    script(src='http://code.jquery.com/jquery.js')
+    //<!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    //<!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+    //<!-- Latest compiled and minified JavaScript -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     meta(charset='utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src='http://code.jquery.com/jquery.js')
     link(href="/stylesheets/spacelab.css", rel="stylesheet")
+    <link href=’http://fonts.googleapis.com/css?family=Merriweather&#8217;rel=’stylesheet’ type=’text/css’>
     link(href='https://fonts.googleapis.com/css?family=Limelight|Flamenco|Federo|Yesteryear|Josefin Sans|Spinnaker|Sansita One|Handlee|Droid Sans|Oswald:400,300,700', media='screen', rel='stylesheet', type='text/css')
-    link(href='stylesheets/bootstrap.css', media='screen', rel='stylesheet', type='text/css')
-    link(href='stylesheets/bootstrap-responsive.css', media='screen', rel='stylesheet', type='text/css')
     link(href='stylesheets/common.css', media='screen', rel='stylesheet', type='text/css')
     link(href='stylesheets/fontawesome.css', media='screen', rel='stylesheet', type='text/css')
     link(href='stylesheets/project.css', media='screen', rel='stylesheet', type='text/css')
     link(href='stylesheets/demo.css', media='screen', rel='stylesheet', type='text/css')
-    //
-       Typekit fonts require an account and a kit containing the fonts used. see https://typekit.com/plans for details. <script type="text/javascript" src="//use.typekit.net/YOUR_KIT_ID.js"></script>
-        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    //   Typekit fonts require an account and a kit containing the fonts used. see https://typekit.com/plans for details.
+    //- <script type="text/javascript" src="//use.typekit.net/YOUR_KIT_ID.js"></script>
+    //- <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     title Demo
   body
     .container-fluid
@@ -26,35 +34,23 @@ head
           .page-header
             h1
               | Digestination
-              small Making the most of your Destination
+            h4 Making the most of your Destination
       .row-fluid
         span.span6
           form(action="/addUser", method="POST")
             p.p-2 Where are you headed?
-            input#location.textinput.pull-center(type='text', name='Shane', placeholder='Location')
-            button.btn.pull-center.btn-1 See a sample digest
+            input#location.textinput.pull-center(type='text', name='Shane', placeholder='Location', style="background: #000000;color: #ffffff;")
+            button#showdigest.btn.pull-center.btn-1 See a sample digest
             p.p-1 When do you leave?
-            input#departure.textinput.pull-center(type='text', name='', placeholder='mm/dd/yyyy')
+            input#departure.textinput.pull-center(type='text', name='', placeholder='mm/dd/yyyy', style="background: #000000;color: #ffffff;")
             p.p-1 When do you return?
-            input#return.textinput.pull-center(type='text', placeholder='mm/dd/yyyy', name='')
+            input#return.textinput.pull-center(type='text', placeholder='mm/dd/yyyy', name='', style="background: #000000;color: #ffffff;")
             p.p-3 Name
-            input#name.textinput.pull-center(type='text', name='', placeholder='')
+            input#name.textinput.pull-center(type='text', name='', placeholder='', style="background: #000000;color: #ffffff;")
             p.p-4 Email
-            input#email.textinput.pull-center(type='text', placeholder='', name='')
-            label.radio
-              input(type='radio', value='', name='')
-              span Radio button
-            label.radio
-              input(type='radio', value='', name='')
-              span Radio button
-            label.radio
-              input(type='radio', value='', name='')
-              span Radio button
-            label.radio
-              input(type='radio', value='', name='')
-              span Radio button
+            input#email.textinput.pull-center(type='text', placeholder='', name='', style="background: #000000;color: #ffffff;")
             button.btn.pull-center Submit
           div
         span.span6
-          .well.pull-right
-            img#sample.image(src='https://lh3.googleusercontent.com/tvK3uDm5seu7hBBm1PyiJA_v_FLJzSnU6gJMRkO87bSkHNfAyrpx-O5Mkm6K458nvQ=w1423-h641')
+          .well.pull-left
+            img#sampledigest.image(src='https://lh3.googleusercontent.com/tvK3uDm5seu7hBBm1PyiJA_v_FLJzSnU6gJMRkO87bSkHNfAyrpx-O5Mkm6K458nvQ=w1423-h641')
