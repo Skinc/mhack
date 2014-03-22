@@ -3,3 +3,23 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  div.span4(id="loginjade")
+      form.form-horizontal(action="/addUser", method="POST",Style="position: absolute;top: 231px;left: 100px;")
+        div.group-control
+          label.control-label(for='inputUsername', Style='color:white') Name
+          div.controls
+            input.input-small(type="text",id="name", placeholder="John Doe")
+        div.group-control
+          label.control-label(for='emailAddress', Style='color:white') Email Address
+          div.controls
+            input.input-small(type="text",id="email", placeholder="JohnDoe@travel.com")
+    
+        div.group-control
+          label.control-label(for='location', Style='color:white') Location 
+          div.controls
+            input.input-small(type="text",id="locationString", placeholder="Boston")
+        div.group-control
+          label.control-label(for='emailAddress', Style='color:white') text only
+            input.input-small(type="checkbox",id="html")
+        div.group-control
+          input.input-small(type="submit", value="submit")
